@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "fname1": {
+      "type": "string"
+    },
+    "fname2": {
+      "type": "integer"
+    },
+    "fname3": {
+      "type": "array",
+      "items": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "fname1",
+    "fname2",
+    "fname3"
+  ]
+}
