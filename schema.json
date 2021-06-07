@@ -2,30 +2,73 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "fname1": {
-      "type": "string"
-    },
-    "fname2": {
-      "type": "integer"
-    },
-    "fname3": {
+    "features": {
       "type": "array",
       "items": [
         {
-          "type": "number"
+          "type": "object",
+          "properties": {
+            "feature_name": {
+              "type": "string"
+            },
+            "feature_value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "feature_name",
+            "feature_value"
+          ]
         },
         {
-          "type": "number"
+          "type": "object",
+          "properties": {
+            "feature_name": {
+              "type": "string"
+            },
+            "feature_value": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "feature_name",
+            "feature_value"
+          ]
         },
         {
-          "type": "string"
+          "type": "object",
+          "properties": {
+            "feature_name": {
+              "type": "string"
+            },
+            "feature_value": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "required": [
+            "feature_name",
+            "feature_value"
+          ]
         }
       ]
+    },
+    "response_type": {
+      "type": "string"
     }
   },
   "required": [
-    "fname1",
-    "fname2",
-    "fname3"
+    "features",
+    "response_type"
   ]
 }
